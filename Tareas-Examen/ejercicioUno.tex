@@ -14,22 +14,24 @@ Demuéstralo o escribe cuál es la propiedad que no cumple y justifica tu respue
     \item Cerradura bajo la suma: Para demostrar que la suma de dos elementos en f[x] sigue estando en f[x], tomemos dos funciones arbitrarias f y g en f[x]. Entonces, para cualquier x en X, tenemos:
     $$ (f + g)(x) = f(x) + g(x) $$
     Dado que $f(x)$ y $g(x)$ están en $F$ (porque son funciones de $X$ a $F$), su suma también estará en $F$. Por lo tanto, $(f + g)(x)$ está en F para todo x, lo que significa que la suma $f + g$ es una función de $X$ a $F$ y, por lo tanto, pertenece a $f[x]$. La cerradura bajo la suma se cumple.    
+
+    \item Cerradura bajo la multiplicación por escalar: Ahora, tomemos una función $f$ en $f[x]$ y un escalar a en $F$. La multiplicación por escalar se define como:
+    $$(af)(x) = af(x) $$
+    Dado que $f(x)$ está en $F$ y a también está en $F$, el producto $af(x)$ también estará en F. Esto significa que $(af)(x)$ está en $F$ para todo $x$, y por lo tanto, la función $af(x)$ pertenece a $f[x]$. La cerradura bajo la multiplicación por escalar se cumple.
+
+    \item Asociatividad de la suma
+    
+    La propiedad de asociatividad de la suma en $f[x]$ sigue directamente de la asociatividad de la suma en $F$, ya que estamos sumando funciones de $X$ a $F$ y, en cada punto $x$, estamos sumando elementos de $F$.
+
+    \item Conmutatividad de la suma: 
+    
+    Similarmente, la conmutatividad de la suma en $f[x]$ sigue de la conmutatividad de la suma en $F$, ya que estamos sumando elementos de $F$ en cada punto $x$.
+
+    \item Elemento neutro de la suma: 
+    
+    La función nula o cero, que mapea todos los elementos de $X$ a $0$ en $F$, actúa como el elemento neutro de la suma en $f[x]$.
+    
+    \item Inverso aditivo: Dada una función $f$ en $f[x]$, su inverso aditivo sería la función $-f(x)$, que mapea cada $x$ a $-f(x)$ en $F$. Esta función existe en $f[x]$ debido a la estructura del campo $F$.    
 \end{enumerate}
 
-
-
-Cerradura bajo la multiplicación por escalar: Ahora, tomemos una función f en f[x] y un escalar a en F. La multiplicación por escalar se define como:
-
-(af)(x) = af(x)
-
-Dado que f(x) está en F y a también está en F, el producto af(x) también estará en F. Esto significa que (af)(x) está en F para todo x, y por lo tanto, la función af(x) pertenece a f[x]. La cerradura bajo la multiplicación por escalar se cumple.
-
-Asociatividad de la suma: La propiedad de asociatividad de la suma en f[x] sigue directamente de la asociatividad de la suma en F, ya que estamos sumando funciones de X a F y, en cada punto x, estamos sumando elementos de F.
-
-Conmutatividad de la suma: Similarmente, la conmutatividad de la suma en f[x] sigue de la conmutatividad de la suma en F, ya que estamos sumando elementos de F en cada punto x.
-
-Elemento neutro de la suma: La función nula o cero, que mapea todos los elementos de X a 0 en F, actúa como el elemento neutro de la suma en f[x].
-
-Inverso aditivo: Dada una función f en f[x], su inverso aditivo sería la función -f(x), que mapea cada x a -f(x) en F. Esta función existe en f[x] debido a la estructura del campo F.
-
-Todas las propiedades necesarias para que f[x] sea un espacio vectorial sobre F están satisfechas. Por lo tanto, las operaciones definidas cumplen con las condiciones requeridas para formar un espacio vectorial de funciones.
+Todas las propiedades necesarias para que $f[x]$ sea un espacio vectorial sobre $F$ están satisfechas. Por lo tanto, las operaciones definidas cumplen con las condiciones requeridas para formar un espacio vectorial de funciones.
