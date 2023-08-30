@@ -8,7 +8,7 @@ $$(f+g)(x) = f(x) + g(x)$$
 $$(af)(x) = a f(x)$$
 
 
-Demuéstralo o escribe cuál es la propiedad que no cumple y justifica tu respuesta
+\noindent Demuéstralo o escribe cuál es la propiedad que no cumple y justifica tu respuesta
 \begin{enumerate}
     \item Cerradura bajo la suma: 
     
@@ -22,11 +22,13 @@ Demuéstralo o escribe cuál es la propiedad que no cumple y justifica tu respue
     
     Por lo tanto, $(f + g)(x)$ está en $F$ para todo $x$, lo que significa que la suma $f + g$ es una función de $X$ a $F$ y, por lo tanto, pertenece a $f[x]$. La cerradura bajo la suma se cumple.
 
-    \item Cerradura bajo la multiplicación por escalar: Ahora, tomemos una función $f$ en $f[x]$ y un escalar $a$ en $F$. La multiplicación por escalar se define como:
+    \item Cerradura bajo la multiplicación por escalar: Para demostrar la cerradura bajo la multiplicación por escalar en $f[x]$, consideremos una función $f \in f[x]$ y un escalar $a \in F$. La multiplicación por escalar se define como:
     
-    $$(af)(x) = af(x) $$
-
-    Dado que $f(x)$ está en $F$ y $a$ también está en $F$, el producto $af(x)$ también estará en $F$. Esto significa que $(af)(x)$ está en $F$ para todo $x$, y por lo tanto, la función $af(x)$ pertenece a $f[x]$. La cerradura bajo la multiplicación por escalar se cumple.
+    \begin{align*}
+        (af)(x) &= a f(x) \in F \quad \text{(Definición de multiplicación por escalar)}
+    \end{align*}
+    
+    Dado que $f(x)$ está en $F$ (ya que $f \in f[x]$) y $a$ también está en $F$, el producto $af(x)$ también estará en $F$. Esto significa que $(af)(x)$ está en $F$ para todo $x$, y por lo tanto, la función $af(x)$ pertenece a $f[x]$. La cerradura bajo la multiplicación por escalar se cumple.
 
     \item Asociatividad de la suma: 
     
