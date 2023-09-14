@@ -1,24 +1,26 @@
 \section*{Ejercicio 2}
-Sean $V := \mathbf{Z} \times \mathbf{Z}$ y $F := \mathbf{Z}_{3}$. $V$ es un $F$-espacio vectorial con las siguientes operaciones para cualesquiera $(a,b), (c,d) \in V$ y $\overline{\lambda} \in F$:
 
-$$(a,b) + (c,d) = (a+c, b+d)$$
-$$\overline{\lambda}(a,b) = (\lambda a, \lambda b)$$
-Demuéstralo o escribe cuál es la propiedad que no cumple y justifica tu respuesta.
+En cada uno de los siguientes incisos, determine (y demuestre, si es el caso) si el conjunto es linealmente
+independiente o no.
 
+\begin{itemize}
+    \item[(a)] En $P_{2}(\mathbb{R})$ el conjunto $S = \{ 1, 1 - x + 2x^{2}, 2 + 3x - x^{2} \}$
+    \item[(b)] En $ M_{3 \times 3},$ el conjunto
+\end{itemize}
 
-
-El conjunto $V = \mathbf{Z} \times \mathbf{Z}$ no es un espacio vectorial sobre el cuerpo $F = \mathbf{Z}_3$ con las operaciones dadas. Para que $V$ sea un espacio vectorial sobre $F$, debe cumplir ciertas propiedades. Analicemos estas propiedades una por una:
-
-1. **Cerradura de la adición:** La operación de adición $(a,b) + (c,d) = (a+c, b+d)$ cumple con la propiedad de cerradura, ya que la suma de dos elementos enteros todavía produce un par de enteros.
-
-2. **Asociatividad de la adición:** La propiedad de asociatividad se cumple en $V$ debido a que estamos utilizando la adición estándar de enteros, que es asociativa.
-
-3. **Elemento neutro de la adición:** El elemento neutro de la adición debería ser el elemento $(0,0)$, ya que $(a,b) + (0,0) = (a+0, b+0) = (a,b)$. Sin embargo, en este caso, $(0,0)$ no es el elemento neutro de la adición, ya que al sumar cualquier elemento $(a,b)$ con $(0,0)$ no obtendríamos de vuelta el mismo elemento.
-
-4. **Inversos aditivos:** Cada elemento $(a,b)$ debería tener un inverso aditivo $(-a, -b)$ tal que $(a,b) + (-a,-b) = (0,0)$. En este caso, si tomamos $(a,b) = (1,1)$, su inverso aditivo sería $(-1,-1)$. Sin embargo, $(-1, -1)$ no pertenece a $V$ ya que estamos trabajando con pares de enteros y $(-1,-1)$ no es un par de enteros.
-
-5. **Cerradura de la multiplicación escalar:** La multiplicación escalar $\overline{\lambda}(a,b) = (\lambda a, \lambda b)$ también cumple con la propiedad de cerradura, ya que la multiplicación de un entero por un escalar en $\mathbf{Z}_3$ todavía produce un entero en $\mathbf{Z}$.
-
-6. **Compatibilidad de escalares:** Esta propiedad implica que la multiplicación escalar distribuye sobre la adición de vectores. En este caso, $\overline{\lambda}((a,b) + (c,d)) = \overline{\lambda}(a+c, b+d) = (\lambda(a+c), \lambda(b+d))$, mientras que $\overline{\lambda}(a,b) + \overline{\lambda}(c,d) = (\lambda a, \lambda b) + (\lambda c, \lambda d) = (\lambda a + \lambda c, \lambda b + \lambda d)$. Estos dos resultados no son iguales, por lo que no se cumple la compatibilidad de escalares.
-
-Dado que no se cumplen todas las propiedades necesarias para que $V$ sea un espacio vectorial sobre $F$, podemos concluir que el conjunto $V = \mathbf{Z} \times \mathbf{Z}$ no forma un espacio vectorial sobre el cuerpo $F = \mathbf{Z}_3$ con las operaciones definidas.
+\begin{equation}
+    S = \left\{
+        \begin{pmatrix}
+            6 & 2 \\
+            -5 & 0 \\
+        \end{pmatrix},         
+        \begin{pmatrix}
+            0 & 3 \\
+            -4 & -5 \\
+        \end{pmatrix},        
+        \begin{pmatrix}
+            3 & 0 \\
+            -2 & 5 \\
+        \end{pmatrix}
+        \right\}
+\end{equation}
