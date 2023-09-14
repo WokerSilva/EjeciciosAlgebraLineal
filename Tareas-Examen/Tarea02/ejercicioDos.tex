@@ -4,23 +4,101 @@ En cada uno de los siguientes incisos, determine (y demuestre, si es el caso) si
 independiente o no.
 
 \begin{itemize}
-    \item[(a)] En $P_{2}(\mathbb{R})$ el conjunto $S = \{ 1, 1 - x + 2x^{2}, 2 + 3x - x^{2} \}$
-    \item[(b)] En $ M_{3 \times 3},$ el conjunto
-\end{itemize}
+    \item[(a)] En $P_{2}(\mathbb{R})$ el conjunto $S = \{ 1, 1 - x + 2x^{2}, 2 + 3x - x^{2} \}$  
 
-\begin{equation}
-    S = \left\{
-        \begin{pmatrix}
-            6 & 2 \\
-            -5 & 0 \\
-        \end{pmatrix},         
-        \begin{pmatrix}
-            0 & 3 \\
-            -4 & -5 \\
-        \end{pmatrix},        
-        \begin{pmatrix}
-            3 & 0 \\
-            -2 & 5 \\
-        \end{pmatrix}
-        \right\}
-\end{equation}
+    Para determinar si el conjunto \(S = \{1, 1 - x + 2x^{2}, 2 + 3x - x^{2}\}\) en \(P_{2}(\mathbb{R})\) es linealmente independiente o no, sigamos los siguientes pasos:
+
+Paso 1: Definición de linealmente independiente.
+Un conjunto de polinomios \(\{p_1(x), p_2(x), p_3(x), \ldots, p_n(x)\}\) se considera linealmente independiente en \(P_{n}(\mathbb{R})\) si la única forma de escribir la combinación lineal igual a cero es haciendo que todos los coeficientes sean iguales a cero:
+
+\[
+c_1p_1(x) + c_2p_2(x) + c_3p_3(x) + \ldots + c_np_n(x) = 0
+\]
+
+donde \(c_1, c_2, c_3, \ldots, c_n\) son coeficientes reales y \(p_i(x)\) son los polinomios en el conjunto.
+
+Paso 2: Considerar la combinación lineal igual a cero.
+Consideramos la siguiente combinación lineal de los polinomios en \(S\):
+
+\[
+c_1(1) + c_2(1 - x + 2x^{2}) + c_3(2 + 3x - x^{2}) = 0
+\]
+
+Donde \(c_1, c_2, c_3\) son los coeficientes que queremos encontrar.
+
+Paso 3: Simplificar la ecuación.
+Distribuimos los coeficientes en la ecuación y agrupamos términos semejantes:
+
+\[
+c_1 + c_2(1 - x + 2x^{2}) + c_3(2 + 3x - x^{2}) = 0
+\]
+
+Esto nos da:
+
+\[
+c_1 + c_2 - c_2x + 2c_2x^{2} + 2c_3 + 3c_3x - c_3x^{2} = 0
+\]
+
+Paso 4: Agrupar términos semejantes.
+Agrupamos términos semejantes:
+
+\[
+(c_1 + c_2 + 2c_3) + (-c_2 - c_3)x + (2c_2 - c_3)x^{2} = 0
+\]
+
+Paso 5: La ecuación debe ser igual a cero para todo \(x\).
+Dado que esta ecuación debe ser verdadera para todos los valores de \(x\), los coeficientes de cada término deben ser igual a cero. Esto nos lleva a un sistema de ecuaciones:
+
+\begin{align*}
+    1. & \quad c_1 + c_2 + 2c_3 = 0 \\
+    2. & \quad -c_2 - c_3 = 0 \\
+    3. & \quad 2c_2 - c_3 = 0
+\end{align*}
+
+
+Paso 6: Resolver el sistema de ecuaciones.
+Resolvamos el sistema de ecuaciones. Empezamos con la ecuación 2:
+
+De la ecuación 2, tenemos:
+
+\[
+-c_2 - c_3 = 0 \implies c_3 = -c_2
+\]
+
+Ahora, sustituimos este valor en la ecuación 3:
+
+\[
+2c_2 - c_3 = 0 \implies 2c_2 - (-c_2) = 0 \implies 2c_2 + c_2 = 0 \implies 3c_2 = 0
+\]
+
+Por lo tanto, \(c_2 = 0\). Ahora, sustituimos \(c_2 = 0\) en la ecuación 1:
+
+\[
+c_1 + c_2 + 2c_3 = 0 \implies c_1 + 0 + 2(-c_2) = 0 \implies c_1 - 2c_2 = 0 \implies c_1 - 2(0) = 0 \implies c_1 = 0
+\]
+
+Hemos encontrado que \(c_1 = 0\), \(c_2 = 0\), y \(c_3 = 0\), lo que significa que la única forma de obtener la combinación lineal igual a cero es haciendo que todos los coeficientes sean iguales a cero. Por lo tanto, el conjunto \(S = \{1, 1 - x + 2x^{2}, 2 + 3x - x^{2}\}\) es linealmente independiente en \(P_{2}(\mathbb{R})\).
+
+
+
+    
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item[(b)] En $ M_{3 \times 3},$ el conjunto
+    \begin{equation}
+        S = \left\{
+            \begin{pmatrix}
+                6 & 2 \\
+                -5 & 0 \\
+            \end{pmatrix},         
+            \begin{pmatrix}
+                0 & 3 \\
+                -4 & -5 \\
+            \end{pmatrix},        
+            \begin{pmatrix}
+                3 & 0 \\
+                -2 & 5 \\
+            \end{pmatrix}
+            \right\}
+    \end{equation}
+\end{itemize}

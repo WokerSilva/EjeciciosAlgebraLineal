@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber main"] 1694706022 "main.bcf" "main.bbl" "main" 1694707015
-  "main.bcf" 1694707015 123121 3a718519d2b4eaa105d6db51555bd549 "pdflatex"
+["biber main"] 1694708449 "main.bcf" "main.bbl" "main" 1694709648
+  "main.bcf" 1694709648 123121 3a718519d2b4eaa105d6db51555bd549 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1694707011 "/home/marco/Documentos/semestre24-1/EjeciciosAlgebraLineal/Tareas-Examen/Tarea02/main.tex" "main.pdf" "main" 1694707015
+["pdflatex"] 1694709644 "/home/marco/Documentos/semestre24-1/EjeciciosAlgebraLineal/Tareas-Examen/Tarea02/main.tex" "main.pdf" "main" 1694709648
   "/etc/texmf/web2c/texmf.cnf" 1661909443 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/marco/Documentos/semestre24-1/EjeciciosAlgebraLineal/Tareas-Examen/Tarea02/main.tex" 1694705695 1499 5a5311645ef9f62e5ca11f3470fc3102 ""
+  "/home/marco/Documentos/semestre24-1/EjeciciosAlgebraLineal/Tareas-Examen/Tarea02/main.tex" 1694708529 1500 0d71d36b8676baf686a11eb750f84bb8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -35,6 +35,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -247,13 +248,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1661910031 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1691004646 2798088 2854445d3908f853c091eab14209a936 ""
   "IMA/Ciencias.png" 1694705429 586224 dda6781fc431d1dbea0477d95aec3249 ""
-  "ejercicioDos.tex" 1694707010 680 a4be77eaec5523ce45303a56d4f958d3 ""
-  "ejercicioTres.tex" 1694706307 568 d8c21f2d1d2f1bdd2ddc3c6db7071a2c ""
-  "main.aux" 1694707015 1052 602aa8a659b10058d25e6ac5567299ac "pdflatex"
-  "main.bbl" 1694706024 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.out" 1694707014 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1694707015 2278 14af68cf10cc4e1fb6e91b3f1da1c5ce "pdflatex"
-  "main.tex" 1694705695 1499 5a5311645ef9f62e5ca11f3470fc3102 ""
+  "ejercicioDos.tex" 1694709638 3377 62918b49d6bc7aa3d3306485dc17419a ""
+  "main.aux" 1694709648 1052 434d0c4786bb82ab0f773127c76b2954 "pdflatex"
+  "main.bbl" 1694708453 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
+  "main.out" 1694709647 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1694709648 2278 14af68cf10cc4e1fb6e91b3f1da1c5ce "pdflatex"
+  "main.tex" 1694708529 1500 0d71d36b8676baf686a11eb750f84bb8 ""
   "packet.tex" 1694704263 5949 2bc3500c1ba35f66cfb1f33343d70e18 ""
   "portada.tex" 1694705508 1845 ed773dd3df06e6be4a0be817f3937e2e ""
   (generated)
