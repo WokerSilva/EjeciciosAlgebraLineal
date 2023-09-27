@@ -1,3 +1,55 @@
 \section*{Ejercicio 5}
 
-Sea $D : P_{3}(\mathbb{R}) \rightarrow P_{3}(\mathbb{R})$, donde $D(f) = f'$. Calcula $K\,er(D)$ e $Im(D)$.
+Sea $D : P_{3}(\mathbb{R}) \rightarrow P_{3}(\mathbb{R})$, donde $D(f) = f'$.  Calcula $K\,er(D)$ e $Im(D)$.
+
+    
+\noindent \textbf{Solución:}
+
+Sean $T : V \to W$ un operador lineal.
+    \begin{itemize}
+        \item El núcleo de $T$, $K\,er(T)$, es el conjunto de todos los vectores $v \in V$ tales que $T(v) = 0$.
+        \item La imagen de $T$, $Im(T)$, es el conjunto de todos los vectores $w \in W$ que se pueden escribir como la imagen de algún vector $v \in V$ por $T$.
+    \end{itemize}
+    
+Sea $D : P_{3}(\mathbb{R}) \to P_{3}(\mathbb{R})$, donde $D(f) = f'$.
+\begin{center}
+    Cálculo de $K\,er(D)$
+\end{center}
+    
+Si $f \in K\,er(D)$. Entonces, $D(f) = 0$, significa que $f' = 0$, nos queda entonces que 
+$f$ es una constante, de esta forma, $K\,er(D) = \boxed{\{ k \in \mathbb{R} \}}$.
+    
+\begin{center}
+    Cálculo de $Im(D)$
+\end{center}
+    
+Sea $g \in P_{3}(\mathbb{R})$. Tenemos que para $g$ se puede escribir de la forma 
+$g(x) = ax^3 + bx^2 + cx + d$, entonces, $D(g) = (3a)x^2 + (2b)x + c$ de esta forma la 
+$Im(D) = \boxed{P_{2}(\mathbb{R})}$.
+
+\begin{enumerate}
+    \item Definimos $K\,er(D)$ e $Im(D)$.
+    
+    \begin{align*}
+        K\,er(D) & = \{ f \in P_{3}(\mathbb{R}) \mid D(f) = 0 \} \\
+        Im(D)    & = \{ g \in P_{3}(\mathbb{R}) \mid g = D(f) \text{ para algún } f \in P_{3}(\mathbb{R}) \}
+    \end{align*}
+
+    \item Calculamos $K\,er(D)$.
+    \begin{align*}
+        f \in K\,er(D) &\Longleftrightarrow D(f) = 0 \\
+        &\Longleftrightarrow f' = 0 \\
+        &\Longleftrightarrow f(x) = k \text{ para algún } k \in \mathbb{R} \\
+        &\Longleftrightarrow f \in \{ k \in \mathbb{R} \}
+    \end{align*}
+        
+    \item Calculamos $Im(D)$.
+    
+    \begin{align*}
+        g \in Im(D) &\Longleftrightarrow g = D(f) \text{ para algún } f \in P_{3}(\mathbb{R}) \\
+        &\Longleftrightarrow g(x) = (3a)x^2 + (2b)x + c \text{ para algún } a, b, c \in \mathbb{R} \\
+        &\Longleftrightarrow g \in P_{2}(\mathbb{R})
+    \end{align*}        
+\end{enumerate}
+
+$\therefore$ Hemos calculado que $K\,er(D) = { k \in \mathbb{R} }$ e $Im(D) = P_{2}(\mathbb{R})$.
