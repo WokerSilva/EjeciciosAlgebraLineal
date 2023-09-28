@@ -3,6 +3,135 @@
 Determina si los siguientes conjuntos son base para $P_2(\mathbb{R})$:
 
 \begin{enumerate}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%% Ejercicio 1.1
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item $\{ 1 - x + 2x^{2},\, 2 + x - 2x^{2},\, 1 - 2x + 4x^{2} \}$
+    
+    Para verificar si el conjunto $\{1 - x + 2x, 2 + x - 2x, 1 - 2x + 4x\}$ es una base para el espacio vectorial $\mathbb{P}_2$, debemos comprobar dos cosas:
+    \begin{enumerate}
+        \item[1] \textbf{¿El conjunto es linealmente independiente?} Para contestar esto comprobaremos
+        si los 3 polinomios en el conjunto son linealmente independientes, para ello la combinación
+        lineal de los 3 polinomios tiene como resultado el polinomio cero. Sean $a, b$ y $c$
+        coeficientes escalares tenemos que comprobar que $a = b = c = 0$ en la ecuación:
+
+        $$a(1 - x + 2x^2) + b(2 + x - 2x^2) + c(1 - 2x + 4x^2)$$
+
+        Desarrollamos
+        \begin{align*}
+            a(1 - x + 2x^2) + b(2 + x - 2x^2) + c(1 - 2x + 4x^2) &= 0 \\
+            a - ax + 2ax^2 + 2b + bx - 2bx^2 + c - 2cx + 4cx^2 &= 0 \\
+            (a + 2b + c) + (-ax + bx - 2cx) + (2ax^2 - 2bx^2 + 4cx^2) &= 0 \\
+            (a + 2b + c) + (-a + b - 2c)x + (2a - 2b + 4c)x^2 &= 0 \\
+        \end{align*}
+            
+        Obteniendo así el siguiente sistema de ecuaciones:
+
+        \begin{equation}
+            a + 2b + c = 0                
+        \end{equation}
+        \begin{equation}
+            -a + b -2c = 0
+        \end{equation}
+        \begin{equation}
+            2a - 2b + 4c = 0
+        \end{equation}
+
+        Para resolverlo, despejamos a de la ecuación $(1)$ : $a = -2b - c$. \\
+        Sustituimos $a$ en $(2)$ y $(3)$ para tener:
+
+        \begin{equation}
+            -(-2b - c) +b -2c = 0 \tag{2}
+        \end{equation}
+        \begin{equation}
+            2(-2b -c) -2b +4c = 0 \tag{3}
+        \end{equation}
+        
+        Simplificamos y agrupamos términos semejantes:
+        \begin{equation}
+            2b + c + b -2c = 0 \tag{2}
+        \end{equation}
+        \begin{equation}
+            -4b -2c - 2b + 4c = 0 \tag{3}
+        \end{equation}
+        \begin{center}
+            $\downarrow$
+        \end{center}
+        \begin{equation}
+            3b - c  = 0 \tag{2}
+        \end{equation}
+        \begin{equation}
+            -6b + 2c = 0 \tag{3}
+        \end{equation}
+
+        Ahora tenemos un sistema de 2 ecuaciones con incógnitas $b$ y $c$. Despejamos $c$ de $(2)$
+        y tenemos $c = 3b$, sustituimos $c$ en $3$ y tenemos $-6b + 2 (3b) = 0$, despejamos $b$ y obtenemos:
+
+        \begin{align*}
+            -6b + 2(3b) & = 0 \\
+            -6b + 6b    & = 0 \\
+            0 & =  \\
+            b & = ?
+        \end{align*}                
+    \end{enumerate}
+    Lo que significa que $b$ puede ser cualquier número real. Y como $b \neq 0$, el conjunto no 
+    cumple con ser linealmente independiente y, por lo tanto, no es una base para $P_2(\mathbb{R})$
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%% Ejercicio 1.2
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item $\{ 1 + 2x + x^{2},\, 3 + x^{2},\, x + x^{2}\}$
+
+    Sabemos que $\dim(P_{n}) = n + 1$, por lo que $\dim (P_{2}(\mathbb{R})) = 3$. Y por un teorema 
+    \textit{Si $V$ es un espacio vectorial de dimensión $n$ y si $S$ es un conjunto en $V$
+    con exactamente $n$ vectores, entonces $S$ es una base para $V$ si $S$ genera a $V$ o si $S$ 
+    es linealmente independiente}\\
+    Por lo tanto, el conjunto $\{ 1 + 2x + x^{2},\, 3 + x^{2},\, x + x^{2}\}$ es base para
+    $P_{2}(\mathbb{R})$ si contiene tres vectores linealmente independientes.
+
+    Comprobemos la independencia lineal del conjunto dado. El conjunto de polinomios es
+    linealmente independiente si la única combinación lineal que da como resultado el polinomio
+    nulo (cero) es la combinación en la que todos los coeficientes son cero. En otras palabras, los
+    polinomios son linealmente independientes si la ecuación:
+    \begin{equation*}
+        \alpha(1 + 2x + x^2) + \beta(3 + x^2) + \gamma(x + x^2) = 0 + 0x + 0x^2 = 0
+    \end{equation*}
+    donde $\alpha$, $\beta$ y $\gamma$ son escalares; solo tiene solución trivial, es decir, $\alpha = \beta = \gamma = 0$.
+
+    Desarrollamos: $\alpha(1 + 2x + x^2) + \beta(3 + x^2) + \gamma(x + x^2) = 0 + 0x + 0x^2 = 0$ y tenemos que:
+    \begin{align*}
+        \alpha + 2\alpha x + \alpha x^2 + 3\beta + \beta x^2 + \gamma x + \gamma x^2 &= 0 + 0x + 0x^2 = 0 \\
+        (\alpha + 3\beta) + (2\alpha x + \gamma x) + \alpha x^2 + \beta x^2 + \gamma x^2 &= 0 + 0x + 0x^2 = 0 \\
+        (\alpha + 3\beta) + (2\alpha + \gamma) x + (\alpha + \beta + \gamma) x^2 &= 0 + 0x + 0x^2 = 0
+    \end{align*}
+        
+    Lo que nos da el siguiente sistema de ecuaciones:
+    \begin{align*}
+        \alpha + 3\beta &= 0 \\
+        2\alpha + \gamma &= 0 \\
+        \alpha + \beta + \gamma &= 0
+    \end{align*}
+    Y resolvemos:
+    \begin{align*}
+        \alpha + 3\beta &= 0 \implies \alpha = -3\beta \\
+        2\alpha + \gamma &= 0 \implies \gamma = -2\alpha = -2(-3\beta) \\
+        \alpha + \beta + \gamma &= 0 \implies -3\beta + \beta + (-2(-3\beta)) = 0 \implies -3\beta + \beta + 6\beta = 0 \implies 4\beta = 0 \implies \beta = 0
+    \end{align*}
+
+    Como $\beta = 0$, sustituimos $\beta$ en: $\alpha + 3\beta = 0 \implies \alpha + 3(0) = 0 \implies \alpha = 0$
+
+    Sustituimos $\alpha$ en: $2\alpha + \gamma = 0 \implies \gamma = 0$
+
+    Por lo tanto: $\alpha = \beta = \gamma = 0$
+
+    Como $\alpha = \beta = \gamma = 0$, podemos decir que es un conjunto linealmente independiente de 3 vectores.
+
+    Dado que estos polinomios son linealmente independientes y forman un conjunto de 3 polinomios en $P_{2}(\mathbb{R})$ y $P_{2}(\mathbb{R})$ es un espacio con dimensión 3 Entonces por el teorema
+    anteriormente citado tenemos que estos polinomios generan $P_{2}(\mathbb{R})$. Y el conjunto es una base
+    para $P_{2}(\mathbb{R})$
+
 \end{enumerate}
