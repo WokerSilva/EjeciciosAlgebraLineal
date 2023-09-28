@@ -3,3 +3,24 @@
 Dada la siguiente transformación lineal
 $$ T : \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}, \hspace*{7mm} T(x,y,z) = (x -2y,\, 0,\,2x -4 )$$
 \textcolor{white}{.} \hspace{3.3mm} Buscar el núcleo y la imagen.
+
+\vspace{5mm}
+\noindent \textbf{Solución:}
+
+Tenemos entonces que el nucleo de $T$, son aquellos $(x,y,z) \in \mathbb{R}^{3}$
+tales que $T(x,y,z)= (x - 2y, 0, 2x - 4y) = (0, 0, 0)$ tenemos el siguiente sistema de ecuaciones:
+
+\begin{align*}
+     x - 2y & = 0 \\
+    2x - 4y & = 0
+\end{align*}
+
+\noindent Tenemos entonces: $x = -2y$
+
+\noindent Por lo tanto, el núcleo de $T$ es $K\,er(T)=\{(x, -\frac{x}{2}, z) \in \mathbb{R}^{3} | x, z \in \mathbb{R} \}$
+
+\noindent  Veamos que $T(x, y, z)=(x - 2y, 0, 2x - 4y) = (x - 2y, 0, 2(x - 2y))$.
+
+\noindent  Dado que $(x - 2y)$ puede tomar cualquier valor en los reales, (en particular si $y=0$), 
+tenemos que la imagen de $T$ es $Im(T)= \{(x, 0, 2x)  \in \mathbb{R}^{3}\,|\, x \in \mathbb{R}\}$
+
