@@ -3,3 +3,109 @@
 Dar un ejemplo de una transformación lineal $T: \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ tal que
 $K\,er(T) = Im(T)$.
 
+\noindent \textbf{Solución:}
+
+Sea \(T : \mathbb{R}^2 \rightarrow \mathbb{R}^2\) dada por \(T(x, y) = (y, 0)\). Cumple con ser una transformación lineal y además cumple con que $K\,er(T) = Im(T)$. Pongámoslo a prueba:
+\begin{enumerate}
+    \item[1] La transformación lineal \(T: \mathbb{R}^2 \to \mathbb{R}^2\) dada por \(T(x, y) = (y, 0)\) es una transformación lineal. Para ello debemos verificar dos propiedades:
+    Propiedad de la suma \(T(u + v) = T(u) + T(v)\) y la propiedad de la multiplicación por un escalar 
+    \(T(cu) = cT(u)\) para cualquier \(u,v \in \mathbb{R}^2\) y \(c \in \mathbb{R}\).
+    
+    \begin{itemize}
+        \item[] \textbf{Propiedad de la suma}
+
+        Tenemos dos vectores $u = (x_1 , y_1)$ y $u = (x_2 , y_2)$ en $\mathbb{R}^2$. Aplicamos la transformación $T$ a $u$ y $v$ de la siguiente manera
+        \begin{equation*}
+            T(u) = (y_{1} , 0) \,\,\, \text{y} \,\,\, T(v) = (y_{2} , 0)
+        \end{equation*}
+        Ahora sumemos $u$ y $v$
+        \begin{equation*}
+            u  + v = (x_{1} + x_{2},\, y_{1} + y_{2})
+        \end{equation*}
+        Luego aplicamos $T au + v$
+        \begin{equation*}
+            T(u  + v) = (y_{1} + y_{2},\, 0)
+        \end{equation*}        
+        Ahora veamos $T(u) + T(v)$
+        \begin{equation*}
+            T(u) + T(v) = (y_{1}, 0) + (y_{2}, 0) =  (y_{1}+ y_{2}, 0)
+        \end{equation*}        
+        Observamos que $T(u+v) = T(u) + T(v)$ por lo tanto hemos demostrado la propiedad de adición
+
+
+        \item[] \textbf{Propiedad de la multiplicación por un escalar}
+        
+        Tenemos un vector $u  =(x,y)$ en $\mathbb{R}^2$ y un escalar $c$. Aplicamos la transformación $T$ a $u$ de la siguiente manera
+        \begin{equation*}
+            T(u) = (y,0)
+        \end{equation*}
+        luego multiplicamos $u$ por $c$:
+        \begin{equation*}
+            cu = (cx, cy)
+        \end{equation*}
+        Ahora aplicamos $T$ a $cu$
+        \begin{equation*}
+            T(cu) = (cy,0)
+        \end{equation*}
+        Finalmente, multiplicamos $T(u)$ por $c$
+        \begin{equation*}
+            cT(u) = c(y,0) = (cy, 0)
+        \end{equation*}
+        Observamos que $T(cu) = cT(u)$, por lo tanto hemos demostrado la propiedad de multiplicación por escalar
+    \end{itemize}
+
+    \item[2] Ahora probemos que $K\,er(T) = Im(T)$
+    
+    EL núcleo de una transformación linea $T$ es el conjunto
+    de vectores de entrada $(x,y)$ que se mapean al vector nulo
+    $(0,0)$ en el espacio de salida $\mathbb{R}$. En otras palabras, 
+    es el conjunto de soluciones de la ecuación $T(x,y) = (0,0)$
+
+    Para encontrar el núcleo, resolvemos la ecuación
+    \begin{equation*}
+        T(x,y) = (y,0) = (0,0)
+    \end{equation*}
+    Esto nos da el sistema de ecuaciones:
+    \begin{align*}
+        y & = 0 \\
+        0 & = 0 \\
+    \end{align*}
+    La primera ecuación nos dice que $y = 0$, que es una solución unica. 
+    La segunda ecuación es una identidad que siempre es verdadera
+
+    Por lo tanto el núcleo de $T$ es el cojunto de todos los vectores
+    $(x,y)$ donde $y$ es igual a $0$ y $x$ puede tomar cualquier valor
+    en $\mathbb{R}$. Esto se representa como $\{ (x,0) | x \in \mathbb{R} \}$
+    Por lo tanto $K\,er(T) = \{ (x,0) | x \in \mathbb{R} \}$
+
+    La imagen de la transformación lineal $T$ es el conjunto 
+    de todos los vectores en el espacio $\mathbb{R}^{2}$ que se pueden 
+    obtener aplicando $T$ a algún vector de entrada en el espacio
+    de entrada $\mathbb{R}^{2}$
+
+    En este caso, $T(x,y) = (y,0)$ lo que significa que la imagen 
+    de $T$ consiste en todos los posibles vectores $(y,0)$ donde 
+    $y$ puede tomar cualquier valor en $\mathbb{R}$
+
+    En otras palabras, la imagen de $T$ es el conjunto de todos 
+    los vectores de la forma $(y,0)$, donde $y$ es el número real. 
+    Esto se representa como $\{ (y,0) | y \in \mathbb{R} \}$
+    Por lo tanto $Im(T) = \{ (y,0) | y \in \mathbb{R} \}$
+
+    Pero, ¿$K\,er(T) = Im(T)$? 
+    Recordemos que $K\,er(T) = \{(x, 0) \, | \, x \in \mathbb{R}\}$ y $Im(T) = \{ (y,0) | y \in \mathbb{R} \}$
+    
+    
+    Esto sería como decir que 
+    $\{(x, 0) \, | \, x \in \mathbb{R}\} = \{ (y,0) | y \in \mathbb{R} \}$ 
+    y si es posible pues $x$ y $y \in \mathbb{R}$, es decir  
+    pueden tomar cualquier valor, incluso pueden ser igual
+    y viceversa. Más aún, notemos que si $(x, 0) = (y, 0)$, quiere decir que $y = x$.
+
+    Otra manera de verlo es que ambos conjuntos representan todos los pares ordenados en $\mathbb{R}^2$ donde el segundo componente es igual a cero y están parametrizados por el mismo conjunto de números reales ($x$ en el primer conjunto y $y$ en el segundo conjunto). En otras palabras, ambos conjuntos consisten en todos los puntos en el plano cartesiano donde la coordenada $y$ (o la segunda coordenada) es igual a cero. Por lo tanto, son conjuntos idénticos y pueden escribirse de manera equivalente.
+
+
+
+
+
+\end{enumerate}
