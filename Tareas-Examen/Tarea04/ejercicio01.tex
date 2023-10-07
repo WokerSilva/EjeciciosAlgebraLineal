@@ -1,2 +1,103 @@
 \section*{Ejercicio 1}
 
+Sea $T: \mathbb{R}^{3} \rightarrow M_{2\times2}(\mathbb{R})$ 
+una función tal que $T(a,b,c) = \left(
+                                    \begin{array}{cc}
+                                        a & b \\
+                                        c & a+b
+                                    \end{array}
+                                \right)$ Realice lo siguiente
+\begin{enumerate}
+    \item Demuestre que $T$ es una transformación lineal 
+    
+    Para demostrar que T es una transformación lineal,
+    debemos verificar que cumple las dos condiciones 
+    siguientes:\\
+
+    \textbf{Condición de additividad:}
+
+    $$ T(a,b,c)+T(d,e,f)=T((a,b,c)+(d,e,f)) $$
+    $
+    \begin{aligned}
+        T(a,b,c) + T(d,e,f) &=  \left(
+                                \begin{array}{cc}
+                                    a & b \\
+                                    c & a+b
+                                \end{array}
+                                \right) +
+                                \left(
+                                \begin{array}{cc}
+                                    d & e \\
+                                    f & d+e
+                                \end{array}
+                                \right) \\
+                                &= \left(
+                                \begin{array}{cc}
+                                    a+d & b+e \\
+                                    c+f & a+b+d+e
+                                \end{array}
+                                \right) \\
+        &= T((a,b,c)+(d,e,f))
+    \end{aligned}
+    $\\
+
+    \textbf{Condición de homogeneidad:}
+    
+    $$ T(ka,kb,kc)=kT(a,b,c) $$
+    $
+    \begin{aligned}
+        T(ka,kb,kc) &= \left(
+                                            \begin{array}{cc}
+                                                ka & kb \\
+                                                kc & ka+kb
+                                            \end{array}
+                                        \right) \\
+        &= k \left(
+                                            \begin{array}{cc}
+                                                a & b \\
+                                                c & a+b
+                                            \end{array}
+                                        \right) \\
+        &= kT(a,b,c)
+    \end{aligned}
+    $
+       
+    $\therefore$ Por lo tanto, $T$ es una transformación lineal.
+
+    \item Verifique el \textit{Teorema de la Dimensión}
+    
+    El dominio de $T$ es $\mathbb{R}^{3}$, que tiene dimensión 3.
+    El rango de $T$ es el conjunto de matrices $2\times2$
+    que se pueden obtener como imagen de algún vector en $\mathbb{R}^{3}$.
+
+    Para demostrar que el rango de $T$ es 3, debemos encontrar
+    tres vectores $v_{1},v_{2},v_{3}$ en $\mathbb{R}^{3}$ tales que
+    $T(v_{1}),T(v_{2}),T(v_{3})$ sean linealmente independientes. Entonces, tomamos los vectores $v_{1} = (1,0,0)$, $v_{2} = (0,1,0)$ y $v_{3} = (0,0,1)$.
+    
+    $
+    \begin{aligned}
+        T(v_1) &= \left(
+                                            \begin{array}{cc}
+                                                1 & 0 \\
+                                                0 & 1
+                                            \end{array}
+                                        \right), \\
+        T(v_2) &= \left(
+                                            \begin{array}{cc}
+                                                0 & 1 \\
+                                                0 & 0
+                                            \end{array}
+                                        \right), \\
+        T(v_3) &= \left(
+                                            \begin{array}{cc}
+                                                0 & 0 \\
+                                                1 & 0
+                                            \end{array}
+                                        \right).
+    \end{aligned}
+    $
+        
+    Estos vectores son linealmente independientes, ya que si $a(1,0,0) + b(0,1,0) + c(0,0,1) = (0,0,0)$,
+    entonces $a = b = c = 0$.    
+
+\end{enumerate}
