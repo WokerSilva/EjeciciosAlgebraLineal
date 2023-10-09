@@ -14,9 +14,8 @@ una función tal que $T(a,b,c) = \left(
     debemos verificar que cumple las dos condiciones 
     siguientes:\\
 
-    \textbf{Condición de additividad:}
+    \textbf{Condición de additividad:} $T(a,b,c)+T(d,e,f)=T((a,b,c)+(d,e,f))$
 
-    $$ T(a,b,c)+T(d,e,f)=T((a,b,c)+(d,e,f)) $$
     $
     \begin{aligned}
         T(a,b,c) + T(d,e,f) &=  \left(
@@ -41,9 +40,8 @@ una función tal que $T(a,b,c) = \left(
     \end{aligned}
     $\\
 
-    \textbf{Condición de homogeneidad:}
+    \textbf{Condición de homogeneidad:} $T(ka,kb,kc)=kT(a,b,c)$
     
-    $$ T(ka,kb,kc)=kT(a,b,c) $$
     $
     \begin{aligned}
         T(ka,kb,kc) &= \left(
@@ -65,39 +63,39 @@ una función tal que $T(a,b,c) = \left(
     $\therefore$ Por lo tanto, $T$ es una transformación lineal.
 
     \item Verifique el \textit{Teorema de la Dimensión}
-    
-    El dominio de $T$ es $\mathbb{R}^{3}$, que tiene dimensión 3.
-    El rango de $T$ es el conjunto de matrices $2\times2$
-    que se pueden obtener como imagen de algún vector en $\mathbb{R}^{3}$.
 
-    Para demostrar que el rango de $T$ es 3, debemos encontrar
-    tres vectores $v_{1},v_{2},v_{3}$ en $\mathbb{R}^{3}$ tales que
-    $T(v_{1}),T(v_{2}),T(v_{3})$ sean linealmente independientes. Entonces, tomamos los vectores $v_{1} = (1,0,0)$, $v_{2} = (0,1,0)$ y $v_{3} = (0,0,1)$.
-    
-    $
-    \begin{aligned}
-        T(v_1) &= \left(
-                                            \begin{array}{cc}
-                                                1 & 0 \\
-                                                0 & 1
-                                            \end{array}
-                                        \right), \\
-        T(v_2) &= \left(
-                                            \begin{array}{cc}
-                                                0 & 1 \\
-                                                0 & 0
-                                            \end{array}
-                                        \right), \\
-        T(v_3) &= \left(
-                                            \begin{array}{cc}
-                                                0 & 0 \\
-                                                1 & 0
-                                            \end{array}
-                                        \right).
-    \end{aligned}
-    $
-        
-    Estos vectores son linealmente independientes, ya que si $a(1,0,0) + b(0,1,0) + c(0,0,1) = (0,0,0)$,
-    entonces $a = b = c = 0$.    
+    El dominio de $T$ es $\mathbb{R}^{3}$, que tiene dimensión 3.
+    El rango de $T$ es el conjunto de matrices $2\times2$ que se pueden obtener como imagen de algún vector en $\mathbb{R}^{3}$.
+
+    Para demostrar que el rango de $T$ es 3, debemos encontrar tres vectores $v_{1}, v_{2}, v_{3}$ en $\mathbb{R}^{3}$ tales que $T(v_{1}), T(v_{2}), T(v_{3})$ sean linealmente independientes. Tomamos los vectores $v_{1} = (1,0,0)$, $v_{2} = (0,1,0)$ y $v_{3} = (0,0,1)$.
+
+\begin{minipage}{0.3\textwidth}
+\[
+\begin{aligned}
+T(v_1) &= \left(
+\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right), \\
+T(v_2) &= \left(
+\begin{array}{cc}
+0 & 1 \\
+0 & 1
+\end{array}
+\right), \\
+T(v_3) &= \left(
+\begin{array}{cc}
+0 & 0 \\
+1 & 0
+\end{array}
+\right).
+\end{aligned}
+\]    
+\end{minipage}
+\hspace{15mm}
+\begin{minipage}{0.5\textwidth}
+Estos vectores son linealmente independientes, ya que si $a(1,0,0) + b(0,1,0) + c(0,0,1) = (0,0,0)$, entonces $a = b = c = 0$. Además, podemos observar que las matrices seleccionadas no generan el dominio de la transformación, ya que no es posible representar cualquier vector en $\mathbb{R}^{3}$ como una combinación lineal de estas matrices. Por lo tanto, la nulidad de la transformación es 0, y el rango es 3, lo que verifica el Teorema de la Dimensión.        
+\end{minipage}
 
 \end{enumerate}
