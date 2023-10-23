@@ -1,12 +1,152 @@
 \section*{Ejercicio 2}
 
-\begin{itemize}
-    \item[(a)] $T: \R^{2} \rightarrow \R^{3}$ tal que $T(a,b) = (2a + b, -3a -2b, 3b)$
-    
-    \item[(b)] $U: \R^{3} \rightarrow P_{2}(R)$ tal que $U(a,b,c) = (a + c) + (3b - 2c)x + (-2a + b -4c)x^{2}$
-\end{itemize}
-
 Dé bases para los tres espacios vectoriales distintas de las canónicas $\beta, \beta', \gamma$ y compruebe que:
 \begin{equation}
     \left[ U \right]_{\beta'}^{\gamma} \left[ T \right]_{\beta}^{\beta'} = \left[ UT \right]_{\beta}^{\gamma}    
 \end{equation}
+
+\begin{itemize}
+    %%%%%%%%%%%%
+    %%%% Ejercicio 2A    
+    \item[(a)] $T: \R^{2} \rightarrow \R^{3}$ tal que $T(a,b) = (2a + b, -3a -2b, 3b)$
+    %%%%%%%%%%%%
+    \begin{itemize}
+        \item \textbf{Base para $\beta$} El espacio de partida es $\R^{2}$, por lo que la base canónica es $\{ (1,0),(0,1) \}$ 
+                Dado que el mapeo de $T$ esta definido como $T(a,b) = (2a + b, -3a -2b, 3b)$, los vectores de la base para $\beta$ son $(2,-3,0)$ y $(1,-2,3)$
+        \item \textbf{Base para $\beta'$} El espacio de llegada es $\R^{3}$ por lo que la base canónica es 
+                $\{ (1,0,0), (0,1,0), (0,0,1) \}$, entonces podemos tomar los vectores resultantes de $T$ en la base canónica de $\R^{3}$, que son $(2,-3,0)$, 
+                $(-1,-2,3)$ y $(0,0,3)$
+        \item \textbf{Base para $\gamma$} Similar al caso de arriba, la base canónica $\R^{3}$ es $\{ (1,0,0), (0,1,0), (0,0,1) \}$ los vectores resultantes
+                son $(2,-3,0)$, $(-1,-2,3)$ y $(0,0,3)$
+    \end{itemize}
+    
+    Ahora vamos a comprobar:
+    \begin{equation*}
+        \left[ U \right]_{\beta'}^{\gamma} \left[ T \right]_{\beta}^{\beta'} = \left[ UT \right]_{\beta}^{\gamma}    
+    \end{equation*}    
+    
+     \begin{itemize}
+        \item La matriz de $T$ respecto a las bases $\beta$ y $\beta'$ es:
+        \begin{center}
+            $ \left[ T \right]_{\beta}^{\beta'}
+            \begin{bmatrix}
+                2  &  1 \\
+               -3  & -2 \\
+                0  &  3 \\
+            \end{bmatrix}      
+            $
+        \end{center}
+        \item  La matriz $U$ respecto de las bases $\beta$ y $\gamma$ es la matriz de cambio de cordenadas de la base canónica a la base $\gamma$
+        \begin{center}
+            $ \left[ U \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                2  &  1  & 0 \\
+               -3  & -2  & 0 \\
+                0  &  3  & 3 \\
+            \end{bmatrix}      
+            $
+        \end{center}
+
+        \item La matriz $UT$ respecto a las bases $\beta$ y $\gamma$ se obtiene multiplicando $\left[ U \right]_{\beta}^{\gamma}$
+                y $\left[ T \right]_{\beta}^{\beta'}$
+        \begin{center}
+            $ \left[ UT \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                1  &  0 \\
+                0  &  1 \\
+                0  &  1 \\
+            \end{bmatrix}      
+            $
+        \end{center}
+
+        \item Entonces la igualdad queda:
+        \begin{center}
+            $ \left[ U \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                2  &  1  & 0 \\
+               -3  & -2  & 0 \\
+                0  &  3  & 3 \\
+            \end{bmatrix}      
+            $
+            $ \left[ T \right]_{\beta}^{\beta'}
+            \begin{bmatrix}
+                2  &  1 \\
+               -3  & -2 \\
+                0  &  3 \\
+            \end{bmatrix}      
+            $
+            =
+            $ \left[ UT \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                1  &  0 \\
+                0  &  1 \\
+                0  &  1 \\
+            \end{bmatrix}      
+            $
+        \end{center}
+     \end{itemize}
+    
+    %%%%%%%%%%%%
+    %%%% Ejercicio 2B    
+    \item[(b)] $U: \R^{3} \rightarrow P_{2}(R)$ tal que $U(a,b,c) = (a + c) + (3b - 2c)x + (-2a + b -4c)x^{2}$
+    %%%%%%%%%%%%
+    \begin{itemize}
+        \item \textbf{Base para $\beta$} Para el espacio $\R^{3}$, la base canónica es $\{ (1,0,0),(0,1,0),(0,0,1) \}$                
+        \item \textbf{Base para $\beta'$} El espacio de llegada es $P_{2}(R)$, que es el espacio del polinomio de grado 2 o menos. La base canónica es $\{ 1,x-1,x^{2} \}$        
+        \item \textbf{Base para $\gamma$} La base canónica $P_{2}(R)$ es $\{ 1,x,x^{2} \}$                
+    \end{itemize}
+
+    Ahora vamos a comprobar:
+    \begin{equation*}
+        \left[ U \right]_{\beta'}^{\gamma} \left[ T \right]_{\beta}^{\beta'} = \left[ UT \right]_{\beta}^{\gamma}    
+    \end{equation*}    
+    \begin{itemize}
+        \item La matriz $U$ respecto a las bases $\beta$ y $\beta'$
+        \begin{center}            
+            $ \left[ U \right]_{\beta}^{\beta'}
+            \begin{bmatrix}
+                1  &   3 & -2  \\
+                1  &  -2 &  1  \\
+                0  &   0 & -4  \\
+            \end{bmatrix}      
+            $
+        \end{center}
+            
+        \item La matriz de $T$ respecto a las base $\beta'$ y $\gamma$ 
+        \begin{center}            
+            $ \left[ T \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                1  &   0 &  0  \\
+                2  &   0 &  0  \\
+                0  &   1 &  0  \\
+            \end{bmatrix}      
+            $
+        \end{center}
+
+        Por lo tanto obtenemos:
+        \begin{center}            
+            $ \left[ U \right]_{\beta}^{\beta'}
+            \begin{bmatrix}
+                1  &   3 & -2  \\
+                1  &  -2 &  1  \\
+                0  &   0 & -4  \\
+            \end{bmatrix}      
+            $
+            $ \left[ T \right]_{\beta}^{\gamma}
+            \begin{bmatrix}
+                1  &   0 &  0  \\
+                2  &   0 &  0  \\
+                0  &   1 &  0  \\
+            \end{bmatrix}      
+            $
+            =
+            $ \left[ UT \right]_{\beta'}^{\gamma}
+            \begin{bmatrix}
+                1  &  3 & -2  \\
+               -1  &  0 &  1  \\
+                0  &  0 &  4  \\
+            \end{bmatrix}      
+            $ 
+        \end{center}
+    \end{itemize}
+\end{itemize}
