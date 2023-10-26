@@ -2,12 +2,98 @@
 
 ¿Las siguientes transformaciones son inyectivas, suprayectivas o ambas?
 
+
+
+
+
+
+
+
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% EJERCICIO 3.B      
     \item $T: \R^{2} \rightarrow \R^{3}$ tal que $T(a,b) = (a + b, 0, 2a - b)$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      Recordando el teorema 1.22 (Sean V y W espacios vectoriales sobre un campo F. Sea \(T:V \to W\) una transformación
+       lineal. Entonces, \(T\) es inyectiva si y solo si \(\text{Ker}(T)=\{0v\}\).) Por lo cual calcularemos el núcleo
+       de \(T\).\\
+
+      El núcleo de \(T\) es el conjunto de todos los vectores \((a, b)\) en \(\mathbb{R}^2\) que se mapean a
+       \((0, 0, 0)\) en \(\mathbb{R}^3\). En otras palabras, necesitamos encontrar todas las soluciones de la ecuación
+       \(T(a,b) = (0, 0, 0)\). \\
+       
+      La transformación \(T\) se define como: \(T(a,b) = (a+b, 0, 2a-b)\) y para encontrar el
+       núcleo resolveremos \(T(a,b) = (0, 0, 0)\). Lo que nos da el siguiente sistema de ecuaciones:
+      \begin{center}      
+      \begin{minipage}{2cm}
+            \begin{align*}
+                  a + b = 0 & \\
+                  0 = 0 & \rightarrow \\
+                  2a - b = 0 &
+            \end{align*}
+      \end{minipage}
+      \begin{minipage}{3cm}
+            \begin{align*}
+                  a + b = 0 &  \\                  
+                  2a - b = 0 &
+            \end{align*}
+      \end{minipage}
+      \end{center}
+
+      Lo que nos da 
+      \begin{align*}
+            b = & -a \\
+            2a -(-a) = 0 \rightarrow 3a = 0 \rightarrow a = &  0 \\
+            b = & 0
+      \end{align*}
+
+      Esto significa que la única solución al sistema \(T(a,b) = (0,0,0)\) es \((a,b) = (0,0)\). En otras palabras, el núcleo de \(T\) consiste únicamente en el vector nulo \((0,0)\).
+
+      Dado que el núcleo de \(T\) es igual al conjunto nulo, hemos demostrado que \(T\) es inyectiva según el teorema anteriormente citado, ya que no hay ningún otro par de vectores \((a,b)\) que se mapee a \((0,0,0)\) aparte del vector nulo.
+
+      Una transformación lineal es sobreyectiva si la imagen de la transformación abarca todo el espacio de destino. Esto significa que, para cualquier vector \((x, y, z)\) en \(\mathbb{R}^3\), debe haber un vector \((a, b)\) en \(\mathbb{R}^2\) tal que \(T(a, b) = (x, y, z)\).
+
+      Tomemos un vector genérico \((x, y, z)\) en \(\mathbb{R}^3\). Queremos encontrar valores de \(a\) y \(b\) que hagan que \(T(a, b) = (x, y, z)\), es decir:
+
+      \begin{align*}
+            a + b & \, = x \\
+                0 & \, = y \\
+            2a - b& \, = z \\
+      \end{align*}
+
+      Dado que $0 = y$, sabemos que $y$ debe ser igual a 0. Esto implica las ecuaciones:
+      \begin{align*}
+            a + b & \, = x \\
+            2a - b& \, = z \\
+      \end{align*}
+
+      Y resolvemos el sistema de ecuaciones:
+      \begin{equation*}
+            a + b = x \rightarrow b = x - a
+      \end{equation*}
+      \begin{align*}
+            2a - b & \, = \, z \\
+            2a - (x - a) & \, = \, z \\
+            3a - x & \, = \, z \\
+            3a  & \, = \, z + x \\
+            a & \, = \, \frac{z + x}{3} \\
+      \end{align*}
+      \begin{equation*}
+            b = x - a \rightarrow b = x - \frac{z+x}{3}
+      \end{equation*}
+
+      Entonces, hemos encontrado una expresión para \(a\) y \(b\) en términos de \(x\) y \(z\). Por lo tanto,
+       para cualquier vector \((x, y, z)\) en \(\mathbb{R}^3\), podemos encontrar un vector \((a, b)\) en
+       \(\mathbb{R}^2\) tal que \(T(a, b) = (x, y, z)\). Esto demuestra que \(T\) es una transformación sobreyectiva.
+
+      \begin{center}
+            \includegraphics[scale = .5]{IMA/teorema2.jpg}
+      \end{center}
+
+
+
 
 
 
