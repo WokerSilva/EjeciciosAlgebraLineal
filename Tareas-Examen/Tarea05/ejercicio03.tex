@@ -3,8 +3,11 @@
 ¿Las siguientes transformaciones son inyectivas, suprayectivas o ambas?
 
 \begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% EJERCICIO 3.B      
     \item $T: \R^{2} \rightarrow \R^{3}$ tal que $T(a,b) = (a + b, 0, 2a - b)$
-    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -32,7 +35,7 @@
             (a + 2b -c, -3a + b + 4c, a - b + 2d, b + c + 3e, 2a + b + d - e) = T(x,y,z,w,v) 
       \end{equation*}
 
-      Esto nos lleva a uns sitema de ecuaciones lineales: 
+      Esto nos lleva a un sistema de ecuaciones lineales: 
       \begin{equation}
             a + 2b -c = x \tag{3.1} \label{ec3.1}
       \end{equation}
@@ -93,7 +96,7 @@
       \begin{equation*}
             c = \frac{(3w - x + y 2z - 6d -9e)}{4}
       \end{equation*}
-      Finalmente, utilicemos estas expresiónes para $a$, $b$ y $c$ en la quinta ecuación \eqref{ec3.5}
+      Finalmente, utilicemos estas expresiones para $a$, $b$ y $c$ en la quinta ecuación \eqref{ec3.5}
       \begin{equation*}
             2 \left(\frac{y-x+b+5c}{2}\right) + \left(\frac{x-y-5c-2z}{3+2d-e}\right) = v
       \end{equation*}
@@ -110,10 +113,38 @@
             e = \frac{(2x - 2y -7c - 2z +6d -3v)}{3}
       \end{equation*}
 
-      Hemos expresado tadas las variables $a,b,c,d,e$ en terminos de $(x.y,z,w,v)$. Esto demuestra que para cualquier 
-      conjunto de varoles $(x.y,z,w,v)$ en $\R^{5}$ existe un conjunto correspondiente de valroes $(a,b,c,d,e)$ en $\R^{5}$
+      Hemos expresado todas las variables $a,b,c,d,e$ en términos de $(x.y,z,w,v)$. Esto demuestra que para cualquier 
+      conjunto de valores $(x.y,z,w,v)$ en $\R^{5}$ existe un conjunto correspondiente de valores $(a,b,c,d,e)$ en $\R^{5}$
       que satisface el sistema de ecuaciones. $\therefore$ Hemos demostrado que $T$ es inyectiva.
 
+      Sabemos que $dim(\R^{5}) = 5$ y además $T$ es inyectiva, por lo que por el teorema $1.25$ podemos decir que $T$ también es Sobreyectiva.
+      \begin{center}
+            \includegraphics[scale = .6]{IMA/teorema 7.4.2.png}
+      \end{center}
+
+      \textbf{Teorema 1.22} Sean $V$ y $W$ espacios vectoriales sobre un campo $F$. Sea $T: V \rightarrow W$ una
+      transformación lineal. Entonces, $T$ es inyectiva si y solo si $Ker(T) = \{ 0_{V}\}$ \\
+
+      \textbf{Teorema 1.23} Sean $V$ y $W$ espacio vectoriales sobre un campo $F$. Sea $T: V \rightarrow W$ una
+      transformación lineal. Las siguientes condiciones son equivalentes:
+      \begin{enumerate}
+            \item[1.] $T$ es inyectiva;
+            \item[2.] Para cualquier subconjunto $S \subseteq V$, se tiene que $S$ es linealmente independiente en $V$ si y solo si $T(S) := \{ T(s) : s \in S\}$
+                  es linealmente independiente en $W$
+            
+      \end{enumerate}
+
+      $\textbf{\text{Teorema 1.25}}^{\textcolor{red}{7}}$ Sean $V$ y $W$ espacios vectoriales de dimensión finita  sobre un campo $F$ con $dim_{F}(V) = dim_{F}(W).$
+      Sea $T: V \rightarrow W$ una transformación lineal. Los siguientes enunciados son equivalentes.
+      \begin{enumerate}
+            \item[1.] $T$ es inyectiva
+            \item[2.] $T$ es suprayectiva
+            \item[3.] $T$ es biyectiva
+      \end{enumerate}
+      
+
+      
+      
 \end{enumerate}
 
 
