@@ -1,8 +1,38 @@
 \section*{Ejercicio 3}
 
-¿Las siguientes transformaciones son inyecticas, suprayectivas o ambas?
+¿Las siguientes transformaciones son inyectivas, suprayectivas o ambas?
 
 \begin{enumerate}
     \item $T: \R^{2} \rightarrow \R^{3}$ tal que $T(a,b) = (a + b, 0, 2a - b)$
+    
+
+    Recordando el teorema 1.22 (Sean V y W espacios vectoriales sobre un campo F. Sea \(T:V \to W\) una transformación lineal. Entonces, \(T\) es inyectiva si y solo si \(\text{Ker}(T)=\{0v\}\).) Por lo cual calcularemos el núcleo de \(T\).
+    El núcleo de \(T\) es el conjunto de todos los vectores \((a, b)\) en \(\mathbb{R}^2\) que se mapean a \((0, 0, 0)\) en \(\mathbb{R}^3\). En otras palabras, necesitamos encontrar todas las soluciones de la ecuación \(T(a,b) = (0, 0, 0)\).
+    La transformación \(T\) se define como: \(T(a,b) = (a+b, 0, 2a-b)\) y para encontrar el núcleo resolveremos \(T(a,b) = (0, 0, 0)\): Lo que nos da el siguiente sistema de ecuaciones:
+
+    
+    \begin{align*}
+    a + b & = 0 & \\
+          &     & a+b = 0\\
+    0     & = 0 \rightarrow &  \\
+          &     & 2a-b = 0\\
+    2a-b  & = 0 &  \\
+    \end{align*}
+
+
+    Lo que nos da que
+
+    \begin{align*}
+    b & = -a \\
+    2a-(-a) & = 0 \rightarrow 3a = 0 \rightarrow a = 0 \\
+    b & = 0
+    \end{align*}
+
+
+
+
+
+
+
     \item $T: \R^{5} \rightarrow \R^{5}$ tal que $T(a,b,c,d,e)  = (a + 2b -c, -3a + b + 4c, a - b + 2d, b + c +3e, 2a +b+d-e)$
 \end{enumerate}
