@@ -12,7 +12,191 @@ bases ordenadas de los respectivos espacios vectoriales. Si
 \end{equation}
 
 \begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Ejercicio 1.1    
     \item Hallar $T(3,-1)$
-    \item Encuentre la regla de correspondencia de dicha tranformación lienal. 
-    \item Determine el nucleo y la imagen de bases para cada uno de estos subespacios.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Se tiene que, por la observación $1.39$ de la matriz de representación matricial:
+    \begin{equation*}
+        [T(2,3)]_{\gamma}= 1/4
+            \begin{pmatrix}
+            48\\
+            -23
+        \end{pmatrix}
+    \end{equation*}
+    \begin{equation*}
+        [T((-1,4))]_{\gamma}= 1/4
+        \begin{pmatrix}
+            48\\
+            -19
+        \end{pmatrix}
+    \end{equation*}
+    Dado a que $T$ es lineal, se cumple que 
+    \begin{itemize}
+        \item $-1T(a)=T(-a)$, para algún a $\in \R^2$
+        \item $T(a) + T(b) = T(a+b)$, para a,b $\in \R^2$
+    \end{itemize}
+        Por lo tanto, tenemos que $T((2,3))-1T((-1,4))=T((2,3)-(-1,4))=T((3,-1))$. Para obtener el valor de $T((3,-1))$, veamos que:
+    \begin{equation*}
+        [T((3,-1))]_\gamma=[T((2,3)-(-1,4))]_{\gamma}=[T(2,3)]_{\gamma}-[T((-1,4))]_{\gamma}
+    \end{equation*}
+    \begin{equation*}
+        = 1/4\begin{pmatrix}
+            48\\
+            -23
+        \end{pmatrix}
+        -1/4 \begin{pmatrix}
+            48\\
+            -19
+        \end{pmatrix}
+    \end{equation*}
+    \begin{equation*}
+        1/4 \begin{pmatrix}
+        48-48\\
+        -23-19
+        \end{pmatrix}
+        =1/4\begin{pmatrix}
+        0\\
+        -4
+        \end{pmatrix}
+        =\begin{pmatrix}
+        0\\
+        -1
+        \end{pmatrix}
+    \end{equation*}
+    Por lo que $T((3,-1)) = (0)(3 + 2x) + (-1)(4) = -4$\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Ejercicio 1.2 
+    \item Encuentre la regla de correspondencia de dicha transformación lineal. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Por el Teorema $1.54$, para cualquier v=(a,b)$\in \R^2$, se tiene que:
+    \begin{equation*}
+        [T(v)]_\gamma = [T]_\gamma^\beta [v]_\beta
+    \end{equation*}
+    \begin{equation*}
+        \begin{pmatrix}
+            a\\
+            b
+        \end{pmatrix}
+        =\alpha \begin{pmatrix}
+            2\\
+            3
+        \end{pmatrix}
+        + \beta 
+        \begin{pmatrix}
+            -1\\
+            4
+        \end{pmatrix}
+    \end{equation*}
+    Tenemos que resolver el siguiente sistema de ecuaciones, para encontrar a $[v]_\beta$:
+    \begin{equation*}
+        2\alpha-\beta=a
+    \end{equation*}
+    \begin{equation*}
+        3\alpha+4\beta=b
+    \end{equation*}
+    \begin{equation*}
+        \beta=2\alpha - a
+    \end{equation*}
+    \begin{equation*}
+        3\alpha+4(2\alpha - a)=b
+    \end{equation*}
+    \begin{equation*}
+        11\alpha - 4a=b
+    \end{equation*}
+    \begin{equation*}
+        \alpha=\frac{4a+b}{11}
+    \end{equation*}
+    \begin{equation*}
+        \beta=2(\frac{4a+b}{11}) - a
+    \end{equation*}
+    \begin{equation*}
+        \beta=\frac{8a+2b}{11}-a
+    \end{equation*}
+    \begin{equation*}
+        \beta=\frac{-3a+2b}{11}
+    \end{equation*}
+
+    \begin{equation*}
+        [v]_\beta= \begin{pmatrix}
+        \frac{4a+b}{11}\\
+        \frac{-3a+2b}{11}
+        \end{pmatrix}
+        = 1/11\begin{pmatrix}
+            4a+b\\
+            -3a+2b
+        \end{pmatrix}
+    \end{equation*}
+    Ya que tenemos el vector columna de v en $\gamma$, lo multiplicamos por la matriz de representación de $\beta$ a $\gamma$:
+    \begin{equation*}
+        [T]_\gamma^\beta [v]_\beta = 1/4 \begin{pmatrix}
+            48 & 48\\
+            -23 & -19
+        \end{pmatrix}
+        1/11\begin{pmatrix}
+            4a+b\\
+            -3a+2b
+        \end{pmatrix}
+    \end{equation*}
+    \begin{equation*}
+        [T]_\gamma^\beta [v]_\beta=1/44
+        \begin{pmatrix}
+            48 & 48\\
+            -23 & -19
+        \end{pmatrix}
+        \begin{pmatrix}
+           4a+b\\
+            -3a+2b
+        \end{pmatrix}
+    \end{equation*}
+    \begin{equation*}
+        [T]_\gamma^\beta [v]_\beta=1/44\begin{pmatrix}
+        48a+144b \\
+        -35a-61b
+        \end{pmatrix}
+    \end{equation*}
+    Ya que tenemos esto, multiplicamos por los vectores de la base $\gamma$:\\
+    \begin{equation*}
+        1/44(48a+144b)(3+2x)=\frac{(12)(a+3b)(3+2x)}{11}
+    \end{equation*}
+    \begin{equation*}
+        1/44(-35a-61b)(4)=\frac{-35a-61b}{11} 
+    \end{equation*}
+    Entonces se tiene que:
+    \begin{equation*}
+        T((a,b))=\frac{(12)(a+3b)(3+2x)}{11}+\frac{-35a-61b}{11}=\frac{(12)(a+3b)(3+2x)-35a-61b}{11}
+    \end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Ejercicio 1.1        
+    \item Determine el núcleo y la imagen de bases para cada uno de estos subespacios.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    De la regla de correspondencia, se tiene que, para que T(a,b)=0, se debe cumplir lo siguiente:
+    $(12)(a + 3b)(3 + 2x) = 0$, pues es el Único con termino de 1er grado, y $-35a - 61b = 0$. Se tiene entonces que:
+    \begin{equation*}
+        (12)(a+3b)(3+2x)=0 \longrightarrow a+3b=0 \longrightarrow a=-3b
+    \end{equation*}
+    \begin{equation*}
+        -35(-3b)-61b=0
+    \end{equation*}
+    \begin{equation*}
+        44b=0 \longrightarrow b=0
+    \end{equation*}
+    \begin{equation*}
+        a+3(0)=0 \longrightarrow a=0
+    \end{equation*}
+    Por lo tanto, para que la transformación dé el vector $0$, $v$ tiene que ser el vector $(0,0)$ 
+     en $\R^2$, por lo tanto $Ker(T) = \{ 0 \}$, cuya base es $\emptyset$. Dado que el
+     $Ker(T) = \{0\}$, se tiene que $T$ es inyectiva, y ya que $dim(\R^2) = dim(P_{1}(\R))$,
+     y por el teorema $1.25$, $T$ es suprayectiva, por lo tanto, su imagen es $P_1(\R)$, 
+     cuya base propuesta es $\Theta = \{x,1\}$
+
+    
 \end{enumerate}
