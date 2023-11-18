@@ -1,0 +1,75 @@
+\section*{Ejercicio 2}
+
+Sean $V$ un $F$-espacio vectorial de dimensión finita, $W$ un subespacio vectorial de $V$ y $T: V \rightarrow V$
+una proyección sobre $W$. Escoger una base ordenada adecuada de $V$ tal que $\left[ T \right]_{\beta}$
+sea la matriz diagonal. \\
+
+\noindent \solucion \\
+
+\textbf{Proyección sobre un subespacio vectorial:} Una proyección sobre
+un subespacio vectorial $W$ es una transformación lineal 
+$T: V \rightarrow V$ tal que para cualquier vector $v$ en $V$,
+$T(v)$ es el punto más cercano a $v$ que está en el subespacio $W$. 
+En otras palabras, $T(v)$ es el vector en $W$ que está más cerca de $v$.
+
+\textbf{Matriz de transformación lineal:} Cualquier transformación lineal
+$T: V \rightarrow V$ puede representarse mediante una matriz.
+En particular, si tenemos una base ordenada $\beta$ de $V$,
+la matriz de $T$ respecto a $\beta$, denotada como $[T]_{\beta}$,
+es la matriz que describe cómo $T$ actúa sobre los vectores en 
+$V$ cuando se expresan en términos de la base $\beta$.
+
+\subsubsection*{Paso 1: Encontrar una base ordenada para $W$}
+
+Supongamos que para $\beta_W = \{w_1, w_2, \ldots, w_k\}$ es base de $W$. Sea la cantidad de vectores que pueda tener forsozamente deben ser linealmente independiente y generar $W$.
+
+\subsubsection*{Paso 2: Ampliar $\beta_W$ a una base ordenada de $V$}
+
+Tomamos los vectores de $\beta_W$ para formar una base ordenada de $V$. Supongamos que 
+\begin{equation*}
+    \beta = \{w_1, w_2, \ldots, w_k, v_{k+1}, v_{k+2}, \ldots, v_n\}
+\end{equation*}
+es una base para $V$, donde $n$ es la dimensión de $V$. Esta base tiene $k$ vectores de $W$ y $(n - k)$ vectores adicionales que completan la base de $V$.
+
+
+\subsubsection*{Paso 3: Proyección $T$ en términos de la base $\beta$}
+
+Para cualquier vector $v$ en $V$, la proyección $T(v)$ es igual a $v$ si $v$ está en $W$, y es igual a $\mathbf{0}$ si $v$ está en el complemento ortogonal de $W$. Podemos expresar $T(v)$ en términos de la base $\beta$ de la siguiente manera:
+
+\[
+T(v) = \begin{cases} v, & \text{si } v \in W \\ \mathbf{0}, & \text{si } v \in \text{complemento ortogonal de } W \end{cases}
+\]
+
+\subsubsection*{Paso 4: Matriz $[T]_{\beta}$}
+
+La matriz $[T]_{\beta}$ tendrá una forma diagonal, donde los bloques correspondientes a $W$ serán matrices identidad y los bloques correspondientes al complemento ortogonal de $W$ serán matrices nulas. Es decir,
+
+\[
+[T]_{\beta} = \begin{pmatrix} I_k & 0 \\ 0 & 0 \end{pmatrix}
+\]
+
+donde $I_k$ es la matriz identidad de tamaño $k \times k$, y $0$ representa una matriz nula de tamaño $(n - k) \times (n - k)$.
+
+Ahora vamos a considerar el espacio vectorial $V = \mathbb{R}^3$ con la proyección $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3$ sobre el subespacio $W$ generado por $(1, 0, 0)$.
+
+\begin{itemize}
+    \item $\beta_W = \{(1, 0, 0)\}$ es una base para $W$.
+    \item Ampliando $\beta_W$, obtenemos la base $\beta = \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}$ para $V$.
+\end{itemize}
+
+La matriz $[T]_{\beta}$ en esta base es:
+
+\[
+[T]_{\beta} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}
+\]
+
+Para demostrar que $[T]_{\beta}$ tiene una forma diagonal, consideremos cómo actúa $T$ sobre los vectores en $V$ expresados en la base $\beta$. Para cualquier $v$ en $V$, $T(v)$ tiene dos posibles casos:
+
+\begin{enumerate}
+    \item Si $v$ está en $W$, entonces $T(v) = v$. En términos de la matriz $[T]_{\beta}$, esto corresponde a multiplicar $[T]_{\beta}$ por $v$ y obtener $v$. Esto se logra usando el bloque $I_k$ en la esquina superior izquierda de $[T]_{\beta}$.
+
+    \item Si $v$ está en el complemento ortogonal de $W$, entonces $T(v) = \mathbf{0}$. En términos de la matriz $[T]_{\beta}$, esto corresponde a multiplicar $[T]_{\beta}$ por $v$ y obtener el vector nulo. Esto se logra usando los bloques de $0$ en la parte inferior de $[T]_{\beta}$.
+
+\end{enumerate}
+
+Por lo tanto, la matriz $[T]_{\beta}$ tiene una forma diagonal como se muestra en el paso 4.

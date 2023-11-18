@@ -1,0 +1,61 @@
+\section*{Ejercicio 1}
+
+Sean $V$ un $F$-espacio vectorial de dimensión finita con base ordenada
+$\beta = \{ x_{1}, \cdots x_{n} \}$ y $x_{0} = 0_{V}$. Demostrar que existe 
+una transformación lineal $T: V \rightarrow V$ que satisface $T(x_{j}) = x_{j} - x_{j-1}$
+para $j = 1, \cdots , n$ y calcular $\left[ T \right]_{\beta}$\\
+
+\noindent \solucion \\
+
+Tenemos a $V$ como el espacio vectorial con la base $\beta = \{x_1, x_2, \ldots, x_n\}$ y la transformación $T : V \to V$ definida por 
+$T(x_j) = x_j - x_{j - 1}$ y $x_{0} = 0$\\
+
+Usando esto, calculemos $T(v_1)$ y $T(v_2)$:
+
+\begin{align*}
+    T(x_1) = & x_1 - x_0 \\
+    = & x_0 - 0 \\ 
+    = & x_1
+\end{align*}
+
+$$ T(x_{2}) = x_{2} - x_{1} , T(x_{3})  = x_{3} - x_{2}, \cdots , T(x_{n}) = x_{n} - x_{n-1} $$
+
+\noindent Sean \(V\) y \(W\) espacios vectoriales sobre \(F\), \(\{x_1, x_2, \ldots, x_n\}\) es la base de \(V\).\\
+
+\noindent Para $n$ vectores cualesquiera $w_1, w_2, \ldots, w_n$ en $W$, existe exactamente una transformación lineal $T: V \to W$ tal que $T(x_i) = w_i$ para $i = 1, 2, \ldots, n$. \\
+
+\noindent Las combinaciones lineales de vectores en un espacio vectorial $V$ son nuevamente un vector en $V$. Por eso $\{x_1, x_2 - x_1, x_3 - x_2, \ldots, x_n - x_{n-1} \}$ es un subconjunto de $n$ vectores en $V$. \\
+
+\noindent Entonces hay una transformación lineal única $T: V \rightarrow W$ tal que  $T(x_{j}) = x_{j} - x_{j-1}$.\\
+
+\noindent Entonces, la base para $V$ es $\beta = \{x_1, x_2, \cdots , x_n\}$ y el conjunto
+ de imágenes de vectores bajo $T$ es 
+ 
+ $$\{x_1, x_2 - x_1, x_3 - x_2, \ldots, x_n - x_{n-1}\}$$
+
+Ahora escribiremos estos vectores como combinaciones lineales de los vectores base.
+
+ \begin{align*}
+    x_{1} = & 1x_{1} + 0x_{2} + 0x_{3} + \ldots 0 x_{n} \\
+    x_{2} - x_{1} = & -1x_{1} + 0x_{2} + 0x_{3} + \ldots 0 x_{n} \\
+    x_{3} - x_{2} = & 0x_{1} + (-1x_{2})  + 1x_{3} + \ldots 0 x_{n}  \\
+    \vdots & \\
+    \vdots & \\
+    x_{n} - x_{n-1} = & 0x_{1} + 0x_{2} + 0x_{3} + \ldots + (-1x_{n-1}) + 1x_{n}
+\end{align*}
+
+
+\noindent Escribimos los coeficientes de las combinaciones lineales como las columnas de la matriz.
+Entonces esta es la matriz requerida $ \left[ T \right]_{\beta}$
+
+
+\[
+\left[ T \right]_{\beta} = 
+\begin{bmatrix}
+    1 & 1  &  0 & \ldots & 0 \\
+    0 & -1 &  1 & \ldots & 0 \\
+    0 &  0 & -1 & \ldots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 &  0 &  0 & \ldots & -1 \\
+\end{bmatrix}
+\]
