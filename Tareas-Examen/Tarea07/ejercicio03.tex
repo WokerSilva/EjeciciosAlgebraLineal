@@ -5,9 +5,50 @@
     
     \noindent \solucion \\
 
-    \item Encuentra la base $\beta$ de $V = P_{1} (\R)$ cuya base dual es $\beta^{*} = \{ f_{1},f_{2} \}$, siendo 
-          $f_{1} \left[ p(x) \right] = \int_{0}^{1} p(x) \, dx$ y $f_{2} \left[ p(x) \right] = \int_{0}^{2} p(x) \, dx$ 
+    La base dual de un espacio vectorial es un conjunto de formas lineales
+    (funciones lineales que toman vectores y devuelven escalares) que 
+    actúan sobre los vectores de la base original. Para una base $\beta = \{v_{1},v_{2}\}$
+    en $\Rdos$, la base dual $\beta^{*} = \{ f_{1},f_{2} \}$ se define tal que
+    $f_{i}(v_{j}) = \delta_{ij}$, donde $\delta_{ij}$ es la delta de Kronecker que es 1 si
+    $i = j$ y 0 en caso contrario.
+
+    Para nuestra base $\beta = \{ (1,2),(3,4) \}$ podemos encontrar la base dual
+    resolviendo el sistema de ecuaciones lineales para $f_{i}(v_{j}) = \delta_{ij}$.
+
+    \begin{align*}
+        f_1((1,2)) & = 1 \\
+        f_1((3,4)) & = 0 \\
+        f_2((1,2)) & = 0 \\
+        f_2((3,4)) & = 1 \\
+    \end{align*}
+
+    Resolviendo este sistema, obtenemos la base dual 
+    \begin{equation*}
+        \beta^{*} = \{ (2,-1), \left( \frac{-3}{2} , 1 \right) \}
+    \end{equation*}
+
+    \item Encuentra la base $\beta$ de $V = P_{1} (\R)$ cuya base dual es
+          $\beta^{*} = \{ f_{1},f_{2} \}$, siendo 
+          $f_{1} \left[ p(x) \right] = \int_{0}^{1} p(x) \, dx$
+          y $f_{2} \left[ p(x) \right] = \int_{0}^{2} p(x) \, dx$ 
 
     \noindent \solucion \\
+
+    Necesitamos encontrar dos polinomios $p_{1}(x), p_{2}(x) \in p_{1}(R)$ tal que 
+    $f_{i}(p_{j}(x)) = \delta_{ij}$
+
+    Esto significa que necesitamos encontrar $p_{1}(x),p_{2}(x)$ tal que:
+
+    \begin{align*}
+        \int_{0}^{1} p_1(x) \, dx &= 1 \\
+        \int_{0}^{2} p_1(x) \, dx &= 0 \\
+        \int_{0}^{1} p_2(x) \, dx &= 0 \\
+        \int_{0}^{2} p_2(x) \, dx &= 1 \\
+    \end{align*}
+
+    Entonces:
+    \begin{equation*}
+        \beta = \{ 1 - 2x, x - \frac{x^{2}}{2}  \}
+    \end{equation*}
 \end{enumerate}
 
