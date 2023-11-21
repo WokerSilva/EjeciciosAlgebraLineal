@@ -10,16 +10,312 @@
 
 \noindent Y la transformación $T: \Rtres \rightarrow \Rtres$ tal que $T(x,y,z) = (2x,x+y,y+z)$ 
 \begin{enumerate}
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
     \item Encuentra la matriz de cambio de coordenadas de la base $\beta$ y $\gamma$
-    
-    \noindent \solucion \\
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
 
+    \vspace{2mm}
+
+    \noindent \solucion
+
+    \begin{center}
+        Escribimos los vectores de $\beta$ como columnas de una matriz
+
+        \vspace{5mm}
+
+        $
+        \beta = 
+            \begin{pmatrix}
+                1 & 0 & 0 \\
+                0 & 1 & 0 \\
+                0 & 0 & 1
+            \end{pmatrix}
+        $
+        \vspace{5mm}
+
+        Multiplicamos esta matriz por $P$
+
+        \vspace{5mm}
+
+        $
+        P \beta = 
+            \begin{pmatrix}
+                1 & 2 & 1 \\
+                0 & 1 & 2 \\
+                0 & 0 & 2
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 0 & 0 \\
+                0 & 1 & 0 \\
+                0 & 0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 & 2 & 1 \\
+                2 & 1 & 2 \\
+                2 & 2 & 2
+            \end{pmatrix}
+        $
+
+        \vspace{5mm}
+
+        El resultado debe ser la matriz que contiene los vectores de $\gamma$ como columnas.
+
+        \vspace{5mm}
+
+        $
+        \gamma = 
+            \begin{pmatrix}
+                1 & 2 & 1 \\
+                2 & 1 & 2 \\
+                2 & 2 & 2
+            \end{pmatrix}
+        $
+    \end{center}
+
+    \vspace{5mm}
+
+    Por lo tanto, la matriz de cambio de coordenadas es la siguiente:
+
+    \begin{align*}
+        P & = 
+        \begin{pmatrix}
+            1 & 2 & 1 \\
+            0 & 1 & 2 \\
+            0 & 0 & 2
+        \end{pmatrix} \\
+    \end{align*}
+    \vspace{5mm}
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
     \item Encuentra la matriz de cambio de coordenadas de la base $\gamma$ y $\beta$ 
-    
-    \noindent \solucion \\
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
 
+    \vspace{2mm}
+
+    \noindent \solucion
+
+    \begin{center}
+        Escribimos los vectores de $\gamma$ como columnas de una matriz.
+
+        \vspace{5mm}
+
+        $
+        \gamma = 
+        \begin{pmatrix}
+            1 & 0 & 1 \\
+            2 & 1 & 2 \\
+            1 & 2 & 2
+        \end{pmatrix}
+        $        
+
+        \vspace{5mm}
+
+        Inversamos esta matriz.
+
+        \vspace{5mm}
+
+        $
+        \gamma^{-1} = 
+            \begin{pmatrix}
+                1 & 0 & -\frac{1}{2} \\
+                0 & 1 & -\frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix}
+        $
+
+        \vspace{5mm}
+        
+        Multiplicamos esta matriz por $\gamma$
+
+        \vspace{5mm}
+
+        $
+        Q \gamma = 
+            \begin{pmatrix}
+                1 & 0 & -\frac{1}{2} \\
+                0 & 1 & -\frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 0 & 1 \\
+                2 & 1 & 2 \\
+                1 & 2 & 2
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 & 0 & 0 \\
+                0 & 1 & 0 \\
+                0 & 0 & 1
+            \end{pmatrix}
+        $
+
+        \vspace{5mm}    
+
+        El resultado debe ser la matriz que contiene los vectores de $\beta$
+        
+        \vspace{5mm}    
+        \begin{align*}
+            Q & = 
+            \begin{pmatrix}
+                1 & 0 & -\frac{1}{2} \\
+                0 & 1 & -\frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix} \\
+        \end{align*}
+    
+    \end{center}
+    
+
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
     \item Comprueba que $\left[ T \right]_{\gamma} = Q^{-1} \left[ T \right]_{\beta} Q$ 
-    
-    \noindent \solucion \\
-\end{enumerate}
+    %%%--- #########################################################################################
+    %%%--- #########################################################################################
 
+    \noindent \solucion
+
+    \textbf{Matriz de $T$ en la base $\beta$}
+    
+    \vspace{2mm}    
+
+    La matriz de $T$ en la base $\beta$ es la matriz que representa el operador lineal $T$ cuando se expresan los
+    vectores en la base $\beta$. Esta matriz se puede encontrar multiplicando la matriz de $T$ por la matriz de
+    cambio de coordenadas de $\gamma$ a $\beta$.
+
+    \begin{equation*}
+        [T]_{\beta} = P^{-1} [T] P
+    \end{equation*}
+
+    Donde $P$ es la matriz de cambio de coordenadas de $\gamma$ a $\beta$ y $[T]$ es la matriz de $T$ en la base
+    estándar. Sabemos que $P$ es la siguiente matriz:
+
+    \begin{center}
+        $
+        P = 
+            \begin{pmatrix}
+                1 & 2 & 1 \\
+                0 & 1 & 2 \\
+                0 & 0 & 2
+            \end{pmatrix}
+        $
+    \end{center}
+
+    Y sabemos que $[T]$ es la siguiente matriz:
+
+    \begin{center}
+        $
+        [T] = 
+            \begin{pmatrix}
+                2 & 1 & 0 \\
+                1 & 1 & 1 \\
+                0 & 0 & 1
+            \end{pmatrix}
+        $
+    \end{center}
+
+    Por lo tanto, la matriz de $T$ en la base $\beta$ es la siguiente:
+
+    \begin{center}
+        $
+        [T]_{\beta} = P^{-1} [T] P = 
+            \begin{pmatrix}
+                1 & -\frac{1}{2} & 0 \\
+                0 & 0 & \frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix}    
+        $
+    \end{center}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \textbf{Matriz de $T$ en la base $\gamma$}
+
+    \vspace{2mm}    
+
+    La matriz de $T$ en la base $\gamma$ es la matriz que representa el operador lineal $T$ cuando se
+    expresan los vectores en la base $\gamma$. Esta matriz se puede encontrar multiplicando la matriz
+    de $T$ por la matriz de cambio de coordenadas de $\beta$ a $\gamma$.
+
+    \begin{equation*}
+        [T]_{\gamma} = Q [T] Q^{-1}
+    \end{equation*}
+
+    Donde $Q$ es la matriz de cambio de coordenadas de $\beta$ a $\gamma$ y $[T]$ es la matriz de $T$
+    en la base estándar. Sabemos que $Q$ es la siguiente matriz:
+
+    \begin{center}
+        $
+        Q = 
+            \begin{pmatrix}
+                1 & 0 & -\frac{1}{2} \\
+                0 & 1 & -\frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix}
+        $
+    \end{center}
+
+    Y sabemos que $[T]$ es la siguiente matriz:
+
+    \begin{center}
+        $
+        [T] = 
+            \begin{pmatrix}
+                2 & 1 & 0 \\
+                1 & 1 & 1 \\
+                0 & 0 & 1
+            \end{pmatrix}
+        $
+    \end{center}
+
+    Por lo tanto, la matriz de $T$ en la base $\gamma$ es la siguiente:
+
+    \begin{center}
+        $
+        [T]_{\gamma} = Q [T] Q^{-1} = 
+            \begin{pmatrix}
+                2 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1
+            \end{pmatrix}
+        $    
+    \end{center}
+
+    Ahora podemos comprobar si la ecuación $\left[ T \right]_{\gamma} = Q^{-1} \left[ T \right]_{\beta} Q$ 
+
+    \begin{center}
+        $
+        Q^{-1} \left[ T \right]_{\beta} Q = 
+            \begin{pmatrix}
+                1 & 0 & \frac{1}{2} \\
+                0 & 1 & \frac{1}{2} \\
+                0 & 0 & -\frac{1}{2}
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & -\frac{1}{2} & 0 \\
+                0 & 0 & \frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 0 & -\frac{1}{2} \\
+                0 & 1 & -\frac{1}{2} \\
+                0 & 0 & \frac{1}{2}
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                2 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1
+            \end{pmatrix}
+        $
+    \end{center}
+
+
+    La ecuación $\left[ T \right]_{\gamma} = Q^{-1} \left[ T \right]_{\beta} Q$ se cumple. Esto significa que
+    la matriz de $T$ en la base $\gamma$ se puede obtener multiplicando la matriz de $T$ en la base $\beta$
+    por la matriz de cambio de coordenadas de $\beta$ a $\gamma$, y luego multiplicando por la inversa de
+    la matriz de cambio de coordenadas.
+\end{enumerate}
