@@ -1,0 +1,21 @@
+\section*{Ejercicio 3}
+Considera la transformación lineal T:$\R^3\rightarrow \R^2$ dada por T(x,y,z)=$(2x-y.3y-z)$. Considérense las siguientes bases de $\R^3$ y $\R^2$ 
+\begin{equation*}
+    \beta=\{(1,0,0),(0,1,0),(0,0,1)\}
+\end{equation*}
+\begin{equation*}
+\beta'=\{(1, 3, 2),(0, 1, 2),(1, 0, 1)\} 
+\end{equation*}
+\begin{equation*}
+    \gamma = \{(1, 1),(2, 1)\}
+\end{equation*}
+\begin{equation*}
+    \gamma' = \{(3, 1),(1, 4)\}
+\end{equation*}
+1. Encuentra las matrices de cambios de coordenadas\\
+\\
+
+2. Calcula las bases duales de $\beta$ y $\gamma$.\\
+
+3. Dada $T^t$ la función transpuesta de T, comprueba que $[T^t]^{\beta*}_{\gamma*}$=$([T^{\gamma}_{\beta}])^t$\\
+\\

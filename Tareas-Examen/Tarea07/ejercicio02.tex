@@ -16,15 +16,216 @@ las siguientes bases de $\Rtres$ y $\Rdos$
 \end{equation*}
 
 \begin{enumerate}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
     \item Encuentra las matrices de cambios de coordenadas 
-    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
     \noindent \solucion \\
 
+    Para encontrar la matriz de cambio de coordenadas, tenemos que encontrar los escalares únicos que cumplan lo siguiente:
+        \begin{equation*}
+            (1, 3, 2)= \_(1,0,0)+\_(0,1,0)+\_(0,0,1)
+        \end{equation*}
+        \begin{equation*}
+        (0, 1, 2)= \_(1,0,0)+\_(0,1,0)+\_(0,0,1)
+        \end{equation*}
+        \begin{equation*}
+            (1, 0, 1)= \_(1,0,0)+\_(0,1,0)+\_(0,0,1)
+        \end{equation*}
+        Y también:
+        \begin{equation*}
+            (3, 1)=\_(1, 1)+\_(2, 1)
+        \end{equation*}
+        \begin{equation*}
+            (1, 4)=\_(1, 1)+\_(2, 1)
+        \end{equation*}
+        Resolvemos, y obtenemos lo siguiente:
+        \begin{equation*}
+            (1, 3, 2)= 1(1,0,0)+3(0,1,0)+2(0,0,1)
+        \end{equation*}
+        \begin{equation*}
+        (0, 1, 2)= 0(1,0,0)+1(0,1,0)+2(0,0,1)
+        \end{equation*}
+        \begin{equation*}
+            (1, 0, 1)= 1(1,0,0)+0(0,1,0)+1(0,0,1)
+        \end{equation*}
+        Y de $\gamma$ a $\gamma$':
+        \begin{equation*}
+            (3, 1)=-1(1, 1)+2(2, 1)
+        \end{equation*}
+        \begin{equation*}
+            (1, 4)=7(1, 1)+(-3)(2, 1)
+        \end{equation*}
+        Tenemos entonces que:
+        \begin{equation*}
+            Q^{\beta}_{\beta'}=
+            \begin{pmatrix}
+                1 & 0 & 1\\
+                3 & 1 & 0\\
+                2 & 2 & 1\\
+            \end{pmatrix}   
+        \end{equation*}
+        Es la matriz de cambio de coordenadas de $\beta $' a $\beta$
+        \\
+        \begin{equation*}
+            Q^{\gamma}_{\gamma'}=
+            \begin{pmatrix}
+                -1 & 7\\
+                2 & -3\\
+            \end{pmatrix}
+        \end{equation*}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
     \item Calcula las bases duales de $\beta$ y $\gamma$
-    
-    \noindent \solucion \\
-    \item Dada $T^{t}$ la función transpuesta de $T$, comprueba que $\left[ T^{t} \right]_{\gamma *}^{\beta *} = \left( \left[ T \right]_{\beta}^{\gamma} \right)^{t}$
-    
-    \noindent \solucion \\
-\end{enumerate}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 
+    \noindent \solucion \\
+
+    Tenemos que $\beta*=\{f_1,f_2,f_3 \}$ es la base dual de $\beta$, donde $f_i$ es la i-esima función coordenada con respecto a $\beta$, que cumple que para cada j-esimo elemento de $\beta$, cumple que: $f_i(x_j)=\delta_{ij}$, siendo $\delta$ la delta de Kronecker\\
+    Calculemos las funciones $f_1, f_2,f_3$ que cumplan lo siguiente:\\
+    \begin{equation*}
+        f_1(1,0,0)=1, f_1(0,1,0)=0, f_1(0,0,1)=0
+    \end{equation*}
+    \begin{equation*}
+        f_2(1,0,0)=0, f_2(0,1,0)=1, f_2(0,0,1)=0
+    \end{equation*}
+    \begin{equation*}
+        f_3(1,0,0)=0, f_3(0,1,0)=0, f_3(0,0,1)=1
+    \end{equation*}
+    Tenemos que $\beta^*=\{f_1,f_2,f_3\}$, con $f_i$:
+    \begin{equation*}
+        f_1:\R^3\longrightarrow \R , f_1(x,y,z)=x
+    \end{equation*}
+    \begin{equation*}
+        f_2:\R^3\longrightarrow \R , f_2(x,y,z)=y
+    \end{equation*}
+    \begin{equation*}
+        f_3:\R^3\longrightarrow \R , f_3(x,y,z)=z
+    \end{equation*}
+    Ahora, calculamos la base dual de $\gamma$, las funciones coordenada que cumplen que:
+    \begin{equation*}
+        g_1(1,1)=1, g_1(2,1)=0
+    \end{equation*}
+    \begin{equation*}
+        g_2(1,1)=0, g_2(2,1)=1
+    \end{equation*}
+    Obtenemos el siguiente sistema de funciones:
+    \begin{equation*}
+        g_1(1,0)+g_1(0,1)=1
+    \end{equation*}
+    \begin{equation*}
+        2g_1(1,0)+g_1(0,1)=0
+    \end{equation*}
+    \begin{equation*}
+        g_2(1,0)+g_2(0,1)=0
+    \end{equation*}
+    \begin{equation*}
+        2g_2(1,0)+g_2(0,1)=1
+    \end{equation*}
+    Resolvemos, y tenemos que:
+    \begin{equation*}
+        g_1(1,0)=-1, g_1(0,1)=2 
+    \end{equation*}
+    \begin{equation*}
+        g_2(1,0)=1, g_2(0,1)=-1 
+    \end{equation*}
+    Tenemos entonces que $\gamma^*=\{g_1,g_2\}$, con $f_i$:\\
+    \begin{equation*}
+        g_1:\R^2\longrightarrow \R ,g_1(x,y)=-x+2y
+    \end{equation*}
+    \begin{equation*}
+        g_2:\R^2\longrightarrow \R ,g_2(x,y)=x-y
+    \end{equation*}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    \item Dada $T^{t}$ la función transpuesta de $T$, comprueba que $\left[ T^{t} \right]_{\gamma *}^{\beta *} = \left( \left[ T \right]_{\beta}^{\gamma} \right)^{t}$
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+    \noindent \solucion \\
+
+    Calculamos $[T]_{\beta}^{\gamma}$, que es la matriz cuyas entradas son los escalares que cumplen lo siguiente:
+    \begin{equation*}
+        T((1,0,0))=(2(1)-(0),3(0)-(0))= (2,0)
+    \end{equation*}
+    \begin{equation*}
+        T((0,1,0))=(2(0)-(1),3(1)-(0))= (-1,3)
+    \end{equation*}
+    \begin{equation*}
+        T((0,0,1))=(2(0)-(0),3(0)-(1))= (0,-1)
+    \end{equation*}
+    Construimos las matrices de representación:
+    \begin{equation*}
+        (2,0)=_(1, 1)+_(2, 1)
+    \end{equation*}
+    \begin{equation*}
+        (-1,3)=_(1, 1)+_(2, 1)
+    \end{equation*}
+    \begin{equation*}
+        (0,-1)=_(1, 1)+_(2, 1)
+    \end{equation*}
+    Los escalares que cumplen esto son los siguientes:
+    \begin{equation*}
+        (2,0)=-2(1, 1)+2(2, 1)
+    \end{equation*}
+    \begin{equation*}
+        (-1,3)=7(1, 1)+-4(2, 1)
+    \end{equation*}
+    \begin{equation*}
+        (0,-1)=-2(1, 1)+1(2, 1)
+    \end{equation*}
+    Tenemos entonces que la matriz de representación es:
+    \begin{equation*}
+        [T]_{\beta}^{\gamma}=\begin{pmatrix}
+            -2 & 7 & -2\\
+           2 & -4 & 1 \\
+        \end{pmatrix}
+    \end{equation*}
+    Transpuesta, la matriz queda:
+    \begin{equation*}
+        ([T]_{\beta}^{\gamma})^t=\begin{pmatrix}
+            -2 & 2\\
+           7 & -4 \\
+           -2 & 1 \\
+        \end{pmatrix}
+    \end{equation*}
+    Por otro lado, encontremos $T^t$, para ello, para cada uno de los elementos de la base dual de $\gamma$, se tiene que:
+    \begin{equation*}
+        T^t(g_1)(x,y,z)=g_1(T(x,y,z))=g_1(2x-y, 3y-z)=-(2x-y)+2(3y-z)=-2x+7y-2z
+    \end{equation*}
+    \begin{equation*}
+        T^t(g_1)(x,y,z)=g_2(T(x,y,z))=g_2(2x-y, 3y-z)=(2x-y)-(3y-z)=2x-4y+z
+    \end{equation*}
+    Para encontrar las columnas de $[T^t]^{\beta*}_{\gamma*}$, tenemos que encontrar los escalares que cumplan lo siguiente:
+    \begin{equation*}
+        -2x+7y-2z=\_(x)+\_(y)+\_(z)
+    \end{equation*}
+    \begin{equation*}
+        2x-4y+z=\_(x)+\_(y)+\_(z)
+    \end{equation*}
+    Siendo los escalares que cumplen esto:
+    \begin{equation*}
+        -2x+7y-2z=(-2)(x)+7(y)+(-2)(z)
+    \end{equation*}
+    \begin{equation*}
+        2x-4y+z=2(x)+(-4)(y)+1(z)
+    \end{equation*}
+    Tenemos entonces que $[T^t]^{\beta*}_{\gamma*}$ es:
+    \begin{equation*}
+        [T^t]^{\beta*}_{\gamma*}=\begin{pmatrix}
+               -2 & 2\\
+           7 & -4 \\
+           -2 & 1 \\
+        \end{pmatrix}
+    \end{equation*}
+    Notemos además que se cumple la siguiente igualdad:
+    \begin{equation*}
+        ([T]_{\beta}^{\gamma})^t= [T^t]^{\beta*}_{\gamma*}
+    \end{equation*}
+
+\end{enumerate}
